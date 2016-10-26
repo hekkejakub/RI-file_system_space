@@ -15,7 +15,18 @@ public class RI_java_file_system_space {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        String input = "";
+        for (String s : args) {
+            input += s + " ";
+        }
+
+        try {
+            CheckSpace checker = new CheckSpace(input);
+            checker.check();
+
+        } catch (Exception e) {
+            System.out.println("dupa nie wyszlo");
+        }
     }
-    
+
 }
